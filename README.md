@@ -1,5 +1,5 @@
 # breach-data-storage
-Adventures in processing and storing massive amounts of data
+*Adventures in processing and storing massive amounts of data*
 
 ## What this is
 Investigators use any suitable public data for their OSINT investigations. For some of us, this includes breach data, i.e. information released publicly to forums, communities, and channels. A few years ago, it was still possible to obtain a few of these data sets, place them on a fast storage device, and search through them with `ripgrep.` This is no longer the case with daily leaks and major sets reaching upwards of TB of data each.
