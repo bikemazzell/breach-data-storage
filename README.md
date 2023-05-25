@@ -30,6 +30,9 @@ With services like HIBP, Dehashed, IntelX, and others, you may wonder why would 
   - JSON can either be transformed via specialized JSON tools or imported into MongoDB and processed there
 - Decide which data will be useful and which can be omitted
   - For SQL, import into a new database, drop unnecessary columns, combine any related data into unified columns, change constraints to allow for NULL values to save space
+    - Use `head -100 file.sql` to preview the first 100 or so lines of the file
+    - If a file is far too large to be viewable/editable on your system, consider splitting it up into more manageable chunks, [SQLDumpSplitter](https://philiplb.de/sqldumpsplitter3/) can help in this situation
+    - Create a database for the incoming data, e.g. `mysql -u root -p -e "create database db-name;"`
 - Import into MongoDB
 - Process in MongoDB
   - If fields have not been unified by this stage, do so now
