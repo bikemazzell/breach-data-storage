@@ -23,4 +23,21 @@ With services like HIBP, Dehashed, IntelX, and others, you may wonder why would 
 [Tools](tools.md) used to process the data
 
 # Process
-
+- Analyze the file (type contents, size, etc.)
+- If file format is simple (e.g. delimited values), nothing more is necessary at this stage
+- If file format is complex (e.g. SQL, JSON), will likely need to import it into a system to manipulate it
+  - SQL files most frequently can go into MySQL, unless it was Postgres dump, which would go to Postgres
+  - JSON can either be transformed via specialized JSON tools or imported into MongoDB and processed there
+- Decide which data will be useful and which can be omitted
+  - For SQL, import into a new database, drop unnecessary columns, combine any related data into unified columns, change constraints to allow for NULL values to save space
+- Import into MongoDB
+- Process in MongoDB
+  - If fields have not been unified by this stage, do so now
+  - If extra fields exist, move them to a sub-document (e.g. `Other` data)
+  - Tag data source
+  - Remove any un-necessary fields
+  - Add indices as necessary
+  - Dump out via `mongodump`
+  - Restore via `mongorestore` into one unified collection
+  - Backup unified collection
+  - Test
