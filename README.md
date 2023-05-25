@@ -14,10 +14,9 @@ This repo does not and will not at any point contain actual data from any breach
 With services like HIBP, Dehashed, IntelX, and others, you may wonder why would you ever bother doing this yourself. The answer is it depends. It will take a lot of time to sift through data and organize it. It will likely need money and willingness to spend it on fast data devices. And it will take a mindset to learn and persist through challenges. In return you get a few key benefits: privacy, greater depth of data, and full control of the data.
 
 # Goals
-- fast querying of data on key fields, such as `name`, `username`, `email`, `password`, `phone`, `ip`
-- querying of additional data that may enrich the above
-- source for the above data
-- low maintenance overhead
+- fast querying of multiple sources of data on key fields, such as `name`, `username`, `email`, `password`, `phone`, `ip`
+- querying of additional data that may enrich the above, including source of the data
+- low maintenance overhead (e.g. data sources vary in content, all of this needs to co-exist; no server level infrastructure and regular upkeep)
 - ease of backup/restore
 
 # Tools
