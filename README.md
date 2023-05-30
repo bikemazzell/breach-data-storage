@@ -44,3 +44,6 @@ With services like HIBP, Dehashed, IntelX, and others, you may wonder why would 
   - Restore via `mongorestore` into one unified collection
   - Backup unified collection
   - Test
+
+# Examples / Cases
+- [Cit0day](cit0day.md)
