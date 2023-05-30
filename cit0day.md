@@ -26,3 +26,4 @@ Cit0day (root level)
   - `find Cit0day -depth -type d -execdir bash -c 'mv "$1" "${1%% *}"' _ {} \;`
 
 # Takeaways
+- Know what you are after before you begin; your requirements may not match someone else's
