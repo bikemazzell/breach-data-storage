@@ -6,9 +6,8 @@ Investigators use any suitable public data for their OSINT investigations. For s
 
 This repo contains my efforts to organize and optimize this type of data for fast and flexible querying. 
 
-
 ## What this isn't
-This repo does not and will not at any point contain actual data from any breach. It is not intended to encourage any illicit activity. Also, it is not the final word on database design, data transformation, or storage. We are all learning as we go. If you have a better way of doing any of this – reach out and contribute!
+This repo does not and *will not* at any point contain actual data from any breach. It is not intended to encourage any illicit activity. Also, it is not the final word on database design, data transformation, or storage. We are all learning as we go. If you have a better way of doing any of this – reach out and contribute!
 
 ## Why
 With services like HIBP, Dehashed, IntelX, and others, you may wonder why would you ever bother doing this yourself. The answer is it depends. It will take a lot of time to sift through data and organize it. It will likely need money and willingness to spend it on fast data devices. And it will take a mindset to learn and persist through challenges. In return you get a few key benefits: privacy, greater depth of data, and full control of the data.
@@ -30,7 +29,7 @@ With services like HIBP, Dehashed, IntelX, and others, you may wonder why would 
   - JSON can either be transformed via specialized JSON tools or imported into MongoDB and processed there
 - Decide which data will be useful and which can be omitted
   - For SQL, import into a new database, drop unnecessary columns, combine any related data into unified columns, change constraints to allow for NULL values to save space
-    - Use `head -100 file.sql` to preview the first 100 or so lines of the file
+    - Use `head -100 file.sql` to preview the first 100 lines of the file
     - If a file is far too large to be viewable/editable on your system, consider splitting it up into more manageable chunks, [SQLDumpSplitter](https://philiplb.de/sqldumpsplitter3/) can help in this situation
     - Create a database for the incoming data, e.g. `mysql -u root -p -e "create database db-name;"`
 - Import into MongoDB
@@ -44,6 +43,7 @@ With services like HIBP, Dehashed, IntelX, and others, you may wonder why would 
   - Restore via `mongorestore` into one unified collection
   - Backup unified collection
   - Test
+- TBD: querying from Terminal/Web
 
 # Examples / Cases
 - [Cit0day](cit0day.md)
