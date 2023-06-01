@@ -47,3 +47,4 @@ With services like HIBP, Dehashed, IntelX, and others, you may wonder why would 
 
 ## ✍️ Examples / Cases
 - [Cit0day](cit0day.md)
+- [AndroidForums](androidforums.md)
