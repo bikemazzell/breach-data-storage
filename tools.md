@@ -1,4 +1,4 @@
-# Tools needed
+# 🧰 Tools
 
 Depending on the data you are trying to process, you will require different tools. Below are the ones you are likely to encounter, learn, and use. Some come with your system, others you will need to get.
 
