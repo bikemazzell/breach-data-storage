@@ -49,5 +49,5 @@ With services like HIBP, Dehashed, IntelX, and others, you may wonder why would 
 
 ## ✍️ Examples
 - [Cit0day](examples/cit0day.md) massive collection of older websites and their user credentials
-- [Collection1](examples/collection1.md) another large collection of usernames/passwords (mostly w/out website sources)
+- [Collection1](examples/collection1.md) another large collection of usernames/passwords (mostly w/out website sources and with more noise)
 - [AndroidForums](examples/androidforums.md) a SQL dump of a popular forum
