@@ -20,7 +20,8 @@ With services like HIBP, Dehashed, IntelX, and others, you may wonder why would 
 
 ## 🧰 Tools
 [Tools](tools.md) used to process the data
-Note: My working environment is Debian based Linux. Some commands will need to be adjusted for other variants/flavors.
+
+*Note*: My working environment is Debian based Linux. Some commands will need to be adjusted for other variants/flavors.
 
 ## 💪 Process
 - Analyze the file (type contents, size, etc.)
