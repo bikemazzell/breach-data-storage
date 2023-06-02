@@ -20,6 +20,7 @@ With services like HIBP, Dehashed, IntelX, and others, you may wonder why would 
 
 ## 🧰 Tools
 [Tools](tools.md) used to process the data
+Note: My working environment is Debian based Linux. Some commands will need to be adjusted for other variants/flavors.
 
 ## 💪 Process
 - Analyze the file (type contents, size, etc.)
@@ -47,5 +48,5 @@ With services like HIBP, Dehashed, IntelX, and others, you may wonder why would 
 
 ## ✍️ Examples
 - [Cit0day](examples/cit0day.md) massive collection of older websites and their user credentials
-- [Collection1](examples/collection1.md) another large collection of usernames/passwords (w/out website sources)
+- [Collection1](examples/collection1.md) another large collection of usernames/passwords (mostly w/out website sources)
 - [AndroidForums](examples/androidforums.md) a SQL dump of a popular forum

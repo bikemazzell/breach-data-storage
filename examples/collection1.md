@@ -28,7 +28,6 @@ Certain folders contain files with website names in them, e.g.:
    ???Niniejszy produkt zawiera oprogramowanie kryptograficzne autorstwa Erica Younga (eay@cryptsoft.com)???. S??owo ???kryptograficzne??? mo??na pomin????, je??eli wykorzystane fragmenty biblioteki nie dotycz?? kryptografii :-).
    ```
 - Other examples include questionable data starting with non-printable/binary characters, non-conforming to email patterns, etc.
--
 - Post processing, file size of CSV is around 72.4GB
 
 # Process
