@@ -33,6 +33,7 @@ Cit0day (root level)
 	- `find Cit0day -type f -name "combined.txt"  -exec cat {} + > Cit0day/cit0day.csv`
 - Remove all of those previously created combined.txt files from individual subfolders
 	`find Cit0day -type d -execdir sh -c 'cd "$0" && find . -name "combined.txt" -delete' {} \;`
+- Now you can injest the CSV file via `mongoimport`
 
 # Takeaways
 - Know what you are after before you begin; your requirements may not match someone else's

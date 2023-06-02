@@ -28,7 +28,7 @@ Certain folders contain files with website names in them, e.g.:
    ???Niniejszy produkt zawiera oprogramowanie kryptograficzne autorstwa Erica Younga (eay@cryptsoft.com)???. S??owo ???kryptograficzne??? mo??na pomin????, je??eli wykorzystane fragmenty biblioteki nie dotycz?? kryptografii :-).
    ```
 - Other examples include questionable data starting with non-printable/binary characters, non-conforming to email patterns, etc.
-- Post processing, file size of CSV is around 33.8GB
+- Post processing, file size of CSV is around 35.8GB
 
 # Process
 
@@ -39,11 +39,16 @@ Certain folders contain files with website names in them, e.g.:
 	- `find Collection1 -type d -empty -delete`
 - Remove all non txt files (unknown and unnecessary)
 	- `find /path/to/directory -type f ! -name "*.txt" -exec rm -f {} \;`
-- Remove crud and normalize all files to have email,pass pattern:
+- Remove crud and normalize all files to have email,pass pattern
 	-  `find Collection1 -type f -exec bash -c 'sed -i -n -E "/^[a-zA-Z0-9._%!$+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}[:|,][^:|^,]*$/p;" "{}"' \;`
 - Combine all files within Collection1 folder into one (see **Exception** below)
 	- `find Collection1 -type f -exec cat {} \; > collection1-combined.csv`
-	
+- Sort and remove duplicates
+	- `sort -u collection1-combined.csv -o collection1-sorted.csv`	
+- Surround fields with quotes
+	- `sed -i "s/\"/\"\"/g;s/,/\",\"/g;s/^/\"/;s/$/\"/" extra-combined.csv`
+- Now you can injest the CSV file via `mongoimport`
+
 	
 - **Exception**: for the few folders that have website names for filenames, move them to a different folder (e.g. `extra`) for additional processing
 	- Rename all files to just the website names
@@ -51,7 +56,7 @@ Certain folders contain files with website names in them, e.g.:
 	- Replace any colons with commas in case of wayward files
 		- `find extra -type f -exec bash -c 'sed -i  "s/:/,/g" "{}"' \;`		
 	- Append the source (website) to each line following username,password fields
-		- `find extra -type f -exec bash -c 'sed -i "s/$/,$(basename "{}")/" "{}"' \;`
+		- `find extra -type f -exec bash -c 'sed -i "s/\r/,$(basename "{}")/" "{}"' \;`
 - Because this collection will have three vs two fields, we will combine and process it separately from the other; we combine all files into one
 	- `find extra -type f -exec cat {} \; > extra-combined.csv`
 - If we try to `mongoimport` this csv now, we will get errors like these:
@@ -59,6 +64,7 @@ Certain folders contain files with website names in them, e.g.:
 	- This means a field (most likely password) has a quote it in and MongoDB needs to have these a) doubled and b) the whole field surrounded by quotes
 	- We solve this with the following command
 		- `sed -i "s/\"/\"\"/g;s/,/\",\"/g;s/^/\"/;s/$/\"/" extra-combined.csv`
+- Now you can injest the CSV file via `mongoimport`
 
 # Takeaways
 - Examine the files carefully to avoid surprises in form of bad data
