@@ -28,11 +28,11 @@ Cit0day (root level)
 - Remove suffixes everywhere:
   - `find Cit0day -depth -type d -execdir bash -c 'mv "$1" "${1%% *}"' _ {} \;`
 - Combine all files within each subfolder into one file called combined.txt, sort and remove duplicates, and append the name of the folder to the end of each line
-	- `find "$directory" -type d -execdir sh -c 'cd "$0" && cat * > combined.txt && sort -u combined.txt -o combined.txt && sed -i "s/:/,/g" combined.txt && sed -i "s/\r/,${PWD##*/}/g" combined.txt' {} \;`
+	- `find Cit0day -type d -execdir sh -c 'cd "$0" && cat * > combined.txt && sort -u combined.txt -o combined.txt && sed -i "s/:/,/g" combined.txt && sed -i "s/\r/,${PWD##*/}/g" combined.txt' {} \;`
 - Combine all of those combined.txt files into one and move it to root folder
-	- `find "$directory" -type f -name "combined.txt"  -exec cat {} + > "$directory"/cit0day.csv`
+	- `find Cit0day -type f -name "combined.txt"  -exec cat {} + > Cit0day/cit0day.csv`
 - Remove all of those previously created combined.txt files from individual subfolders
-	`find "$directory" -type d -execdir sh -c 'cd "$0" && find . -name "combined.txt" -delete' {} \;`
+	`find Cit0day -type d -execdir sh -c 'cd "$0" && find . -name "combined.txt" -delete' {} \;`
 
 # Takeaways
 - Know what you are after before you begin; your requirements may not match someone else's

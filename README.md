@@ -45,6 +45,7 @@ With services like HIBP, Dehashed, IntelX, and others, you may wonder why would 
   - Test
 - TBD: querying from Terminal/Web
 
-## ✍️ Examples / Cases
-- [Cit0day](cit0day.md)
-- [AndroidForums](androidforums.md)
+## ✍️ Examples
+- [Cit0day](examples/cit0day.md) massive collection of older websites and their user credentials
+- [Collection1](examples/collection1.md) another large collection of usernames/passwords (w/out website sources)
+- [AndroidForums](examples/androidforums.md) a SQL dump of a popular forum
