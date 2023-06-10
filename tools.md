@@ -9,7 +9,8 @@ Depending on the data you are trying to process, you will require different tool
 
 ## Data processing tools
   - `cut`, `awk`, `sed` along with basic bash script knowledge to string them together
-
+  - `jq` to process JSON files
+  
 ## Database tools
 
 ### MySQL
