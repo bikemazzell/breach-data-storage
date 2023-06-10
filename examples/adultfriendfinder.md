@@ -22,8 +22,8 @@
 	- `jq 'if .email? then .email |= gsub("(^'\''|'\''$)"; "") else . end | if .password? then .password |= gsub("(^'\''|'\''$)"; "") else . end | if .username? then .username |= gsub("(^'\''|'\''$)"; "") else . end' aff.json > aff-clean.json`
 - Back in mongosh, remove all adultfriendfinder fields
 	- `db.sites.deleteMany({source:"adultfriendfinder"})`
-- Re-import clean file
-	- 
+- Re-import clean file via `mongoimport` and test
+
 # Takeaways
 - Sometimes you miss data issues and have to re-work it
 	- This may involve removing it from the overall set first, processing it, and re-importing it back
