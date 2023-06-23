@@ -27,7 +27,7 @@ Collection2-5&Antipublic (root level)
 - Not one but many different patterns to consider
 - Thus far, the longest collection to process
 - Resulting set of cleaned data is around 90GB 
-
+- In the process, discovered and used a few other handy tools such as `tr`, `csv`, and `qsv`
 
 # Process
 
@@ -64,7 +64,7 @@ Collection2-5&Antipublic (root level)
 - One folder had some text files without extensions and others with, so we normalize to have TXT extension for all within that folder
 	- `find Collection\ #5_DUMP\ dehashed -type f ! -name "*.txt" -exec mv {} {}.txt \;` 
 - Another folder had no credentials, just keywords and is safe to remove
-	- rm -rf `Коллекция ключевых слов 2015 - разбиты по папкам`
+	- `rm -rf Коллекция ключевых слов 2015 - разбиты по папкам`
 - Folders `Collection #2_New combo cloud_Database Collection_XLSX Base Collection*` and similar contain only sets of names and some phone numbers, mostly Russian; if you do not need it, you can delete them
 - Combine all files into one
 	- `find . -type f -exec cat {} + > ../c25.csv`
