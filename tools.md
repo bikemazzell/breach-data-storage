@@ -10,6 +10,9 @@ Depending on the data you are trying to process, you will require different tool
 ## Data processing tools
   - `cut`, `awk`, `sed` along with basic bash script knowledge to string them together
   - `jq` to process JSON files
+  - `tr` to clean out noisy text data, e.g. remove all but printable characters in each line
+  - [`xsv`](https://github.com/martijn/xsv) to split up large CSV files, get stats, format data
+  - [`qsv`](https://github.com/jqnatividad/qsv) similar to above with extra sorting and de-duping options
   
 ## Database tools
 
