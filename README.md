@@ -50,6 +50,7 @@ With services like HIBP, Dehashed, IntelX, and others, you may wonder why would 
 ## ✍️ Examples
 - [Cit0day](examples/cit0day.md) massive collection of older websites and their user credentials
 - [Collection1](examples/collection1.md) another large collection of usernames/passwords (mostly w/out website sources and with more noise)
+- [Collections2-5](examples/collections2-5.md) another very large collection of usrernames/passwords with a lot of noise and duplicates
 - [COMB](examples/comb.md) yet another very large set of credentials 
 - [AndroidForums](examples/androidforums.md) a SQL dump of a popular forum
 - [AdultFriendFinder](examples/adultfriendfinder.md) post-processing a collection with issues

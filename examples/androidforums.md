@@ -33,7 +33,7 @@
 	- Create an index as you see fit `db.androidforums.createIndex({"email":1});`
 	- Set source `db.androidforums.updateMany({},{$set:{source:"androidforums"}});`
 	- Move secondary data into its own sub-document `db.androidforums.updateMany({},[{$set: {other: {icq:"$icq", yahoo:"$yahoo", skype:"$skype", msn:"$msn", dob:"$dob", salt:"$salt"}}}]);`
-	- Remove original entries for secondary data `db.ware.updateMany({},{$unset: {icq:"", yahoo:"", skype:"", dob:"", salt: "", msn:""}});` 
+	- Remove original entries for secondary data `db.androidforums.updateMany({},{$unset: {icq:"", yahoo:"", skype:"", dob:"", salt: "", msn:""}});` 
 	- Confirm that data looks good `db.androidforums.find({}).limit(1);`
 - Export data out to BSON format
 	- `mongodump --db breaches --collection=androidforums --out .`
